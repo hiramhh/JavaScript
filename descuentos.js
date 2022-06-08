@@ -18,6 +18,8 @@ function onClickButtonPriceDiscount(){
     // const resultP = document.getElementById("ResultP");
 
     // resultP.innerText = "El precio con descuento son: $" + precioConDescuento;
+
+
     const coupons = [
         {
             name: "Hot sale",
@@ -32,7 +34,10 @@ function onClickButtonPriceDiscount(){
             discount: 25,
         },
     ];
-    
+
+   const inputCoupon = document.getElementById("InputCoupon");
+    const couponValue = inputCoupon.value;
+
     const isCouponValueValid = function (coupon){
         return coupon.name === couponValue;
     };
@@ -47,7 +52,7 @@ function onClickButtonPriceDiscount(){
         const precioConDescuento = calcularPreciConDescuento(priceValue, descuento);
     
         const resultP = document.getElementById("ResultP");
-        resultP.innerText = "El precio con descuento son: $" + precioConDescuento;
+        resultP.innerText = "El precio con descuento es: $" + precioConDescuento;
     }
     
 }

@@ -21,3 +21,12 @@ In this repository are my JavaScript projects
 - Segun pado: Implementar las formulas en JavaScript
 - Tercer paso: Crear funciones
 - Cuarto paso: Integrar JavaScript con HTML
+
+
+...
+
+## Proyecto #3: media, mediana y moda.
+- Primer paso: definir las formulas
+- Segun pado: Implementar las formulas en JavaScript
+- Tercer paso: Crear funciones
+- Cuarto paso: Integrar JavaScript con HTML

@@ -9,13 +9,26 @@ function calcularMediaAritmetica(lista){
     return promedioLista;
 }
 
-const lista1 =  [
-    100,
-    200,
-    500,
-    400000000
-];
+const lista1 =  [];
 
+
+
+function onClickButtonMediana(){
+    const inputMediana = document.getElementById("InputList");
+    const medianaValue = lista1.push(inputMediana.value);
+}
+
+function comparacion (a, b){
+    return a - b;
+}
+
+function onClickButtonOrdenar(){
+    lista1.sort(comparacion);
+    return console.log(lista1);
+}
+
+
+function onClickButtonCalculo(){
 
 const mitadLista1 = parseInt(lista1.length / 2);
 
@@ -43,4 +56,8 @@ if(esPar(lista1.length)){
     mediana = promedioElemento1y2;
 } else{
     mediana = lista1[mitadLista1];
+}
+
+const resultP = document.getElementById("mediaP");
+resultP.innerText = "La mediana de la lista es: " + mediana;
 }

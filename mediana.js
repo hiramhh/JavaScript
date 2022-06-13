@@ -9,13 +9,26 @@ function calcularMediaAritmetica(lista){
     return promedioLista;
 }
 
-const lista1 =  [
-    100,
-    200,
-    500,
-    400000000
-];
+const lista1 =  [];
 
+function agregacionValor(){
+    const input = document.getElementById("InputValor");
+    const valorNuevo = input.value;
+
+    const numeroNuevo = lista1.push(valorNuevo);
+    console.log(lista1);
+}
+
+const g = lista1.split(",").map(Number);
+console.log(g);
+
+
+
+
+
+
+// const valorNuevo = prompt("Ingresa el valor nuevo a la lista");
+// lista1.push(parseInt(valorNuevo));
 
 const mitadLista1 = parseInt(lista1.length / 2);
 

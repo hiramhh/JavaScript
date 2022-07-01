@@ -1,59 +1,65 @@
-function calcularMediaAritmetica(lista){
-    const sumaLista = lista.reduce(
-        function (valorAcumulado = 0, nuevoElemento){
-            return valorAcumulado + nuevoElemento;
-        }
-    );
+
+
+// const lista1 =  [
+//     100,
+//     400000000,
+//     500,
+//     200,
     
-    const promedioLista = sumaLista /lista.length;
-    return promedioLista;
-}
+   
+// ];
 
-const lista1 =  [];
+// function onClickButtonNuevoValor(){
+//     const inputValor = document.getElementById("InputValor");
+//     const entradaValor = lista1.push(inputValor.value);
+// }
 
-function agregacionValor(){
-    const input = document.getElementById("InputValor");
-    const valorNuevo = input.value;
+// function obj = Object.assign({}, lista1); 
+function calculoMedianaAritmetica(lista){
 
-    const numeroNuevo = lista1.push(valorNuevo);
-    console.log(lista1);
-}
+    function calcularMediaAritmetica(lista){
 
-const g = lista1.split(",").map(Number);
-console.log(g);
+        const sumaLista = lista.reduce(
+            function (valorAcumulado = 0, nuevoElemento){
+                return valorAcumulado + nuevoElemento;
+            }
+        );
+    
+        const promedioLista = sumaLista /lista.length;
+    
+        return promedioLista;
+    }
+
+lista.sort(
+    function (a,b){
+        return a-b
+    }
+);
+
+const mitadLista1 = parseInt(lista.length / 2);
 
 
-
-
-
-
-// const valorNuevo = prompt("Ingresa el valor nuevo a la lista");
-// lista1.push(parseInt(valorNuevo));
-
-const mitadLista1 = parseInt(lista1.length / 2);
-
-function esPar(numerito){
-    if (numerito % 2 === 0){
+function esPar(numerito) {
+    if (numerito % 2 === 0) {
         return true;
     } else {
         return false;
     }
 }
 
-
 let mediana;
 
+if (esPar(lista.length)) {
+    const elemento1 = lista[mitadLista1 - 1];
+    const elemento2 = lista[mitadLista1];
 
-if(esPar(lista1.length)){
-    const elemento1 = lista1[mitadLista1 - 1];
-    const elemento2 = lista1[mitadLista1];
 
-    const promedioElemento1y2 = calcularMediaAritmetica([
-        elemento1,
-        elemento2,
-    ]);
+    const promedioElemnto1y2 = calcularMediaAritmetica([elemento1, elemento2]);
 
-    mediana = promedioElemento1y2;
-} else{
-    mediana = lista1[mitadLista1];
+    mediana = promedioElemnto1y2;
+} else {
+    mediana = lista[mitadLista1];
+}
+
+return console.log(mediana);
 }
